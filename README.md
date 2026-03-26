@@ -42,7 +42,7 @@ To run the project locally:
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/degreefyd.git
+    git clone https://github.com/Bhartinaveen/Degree-FYD_Assignment.git
     ```
 2.  **Install dependencies**:
     ```bash
@@ -64,4 +64,4 @@ DegreeFYD follows a **minimalist yet functional** design philosophy. We prioriti
 
 ---
 
-*Developed for educational excellence by **DegreeFYD Team**.*
+*Developed for educational excellence by **Naveen Bharti**.*
