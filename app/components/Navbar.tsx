@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navItems = [
-  { 
-    label: "Universities", 
+  {
+    label: "Universities",
     hasDropdown: true,
     categories: [
       {
@@ -37,9 +37,9 @@ const navItems = [
       }
     ]
   },
-  { 
-    label: "Courses", 
-    hasDropdown: true, 
+  {
+    label: "Courses",
+    hasDropdown: true,
     active: true,
     categories: [
       {
@@ -71,8 +71,8 @@ const navItems = [
       }
     ]
   },
-  { 
-    label: "Exams", 
+  {
+    label: "Exams",
     hasDropdown: true,
     categories: [
       {
@@ -104,13 +104,13 @@ const navItems = [
       }
     ]
   },
-  { 
-    label: "About us", 
+  {
+    label: "About us",
     hasDropdown: false,
     href: "/about"
   },
-  { 
-    label: "More", 
+  {
+    label: "More",
     hasDropdown: true,
     categories: [
       {
@@ -141,7 +141,7 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1440px] mx-auto pl-2 pr-4 sm:px-6 lg:pl-4 lg:pr-16 xl:pl-2 xl:pr-18">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 flex-shrink-0 group">
@@ -157,7 +157,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <div 
+              <div
                 key={item.label}
                 className="relative h-16 flex items-center"
                 onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.label)}
@@ -165,11 +165,10 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href || "#"}
-                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors h-full ${
-                    item.active
-                    ? "text-[#0d3b59] font-semibold"
-                    : "text-[#191919] hover:text-[#0d3b59]"
-                  }`}
+                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors h-full ${item.active
+                      ? "text-[#0d3b59] font-semibold"
+                      : "text-[#191919] hover:text-[#0d3b59]"
+                    }`}
                 >
                   {item.label}
                   {item.hasDropdown && (
@@ -181,7 +180,7 @@ export default function Navbar() {
 
                 {/* Mega Menu Dropdown */}
                 {item.hasDropdown && activeDropdown === item.label && (
-                  <div 
+                  <div
                     className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-[1000px] bg-white border border-gray-100 shadow-2xl rounded-b-2xl py-10 px-12 grid grid-cols-3 gap-12 animate-in fade-in slide-in-from-top-2 duration-200"
                   >
                     {item.categories?.map((cat) => (
@@ -192,7 +191,7 @@ export default function Navbar() {
                         <ul className="space-y-3.5">
                           {cat.items.map((subItem) => (
                             <li key={subItem.name}>
-                              <Link 
+                              <Link
                                 href={subItem.href}
                                 className="text-[15px] text-[#191919] hover:text-[#ed923d] transition-colors block font-medium"
                               >
@@ -211,13 +210,13 @@ export default function Navbar() {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Link 
+            <Link
               href="/signup"
               className="px-6 py-2 text-[14px] font-bold text-[#0d3b59] border border-[#0d3b59]/30 rounded-lg hover:bg-gray-50 transition-colors"
             >
               Sign up
             </Link>
-            <Link 
+            <Link
               href="/login"
               className="px-8 py-2 text-[14px] font-bold text-white bg-[#0d3b59] rounded-lg hover:bg-[#14304f] transition-all shadow-sm"
             >
@@ -248,20 +247,18 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Sidebar Drawer */}
-        <div 
-          className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${
-            mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+        <div
+          className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] transition-opacity duration-300 md:hidden ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
           onClick={() => setMobileOpen(false)}
         />
-        <div 
-          className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[70] shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        <div
+          className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[70] shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${mobileOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="flex items-center justify-between p-4 border-b border-gray-100">
             <span className="text-lg font-bold text-[#0d3b59]">Menu</span>
-            <button 
+            <button
               onClick={() => setMobileOpen(false)}
               className="p-2 text-gray-500 hover:text-[#0d3b59]"
             >
@@ -279,16 +276,15 @@ export default function Navbar() {
                     <>
                       <button
                         onClick={() => setMobileDropdown(mobileDropdown === item.label ? null : item.label)}
-                        className={`w-full flex items-center justify-between py-2.5 px-3 rounded-xl transition-all ${
-                          item.active || mobileDropdown === item.label ? "bg-gray-50 text-[#0d3b59]" : "text-[#191919]"
-                        }`}
+                        className={`w-full flex items-center justify-between py-2.5 px-3 rounded-xl transition-all ${item.active || mobileDropdown === item.label ? "bg-gray-50 text-[#0d3b59]" : "text-[#191919]"
+                          }`}
                       >
                         <span className="text-[15px] font-semibold">{item.label}</span>
                         <svg className={`w-4 h-4 text-gray-400 transition-transform ${mobileDropdown === item.label ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
-                      
+
                       {mobileDropdown === item.label && (
                         <div className="mt-1 ml-4 space-y-4 py-2 border-l-2 border-gray-100 pl-4 animate-in slide-in-from-top-1 duration-200">
                           {item.categories?.map((cat) => (
@@ -299,7 +295,7 @@ export default function Navbar() {
                               <ul className="space-y-2">
                                 {cat.items.map((subItem) => (
                                   <li key={subItem.name}>
-                                    <Link 
+                                    <Link
                                       href={subItem.href}
                                       onClick={() => setMobileOpen(false)}
                                       className="text-[14px] text-[#191919] hover:text-[#0d3b59] block py-1"
@@ -318,9 +314,8 @@ export default function Navbar() {
                     <Link
                       href={item.href || "#"}
                       onClick={() => setMobileOpen(false)}
-                      className={`w-full flex items-center justify-between py-2.5 px-3 rounded-xl transition-all ${
-                        item.active ? "bg-gray-50 text-[#0d3b59]" : "text-[#191919]"
-                      }`}
+                      className={`w-full flex items-center justify-between py-2.5 px-3 rounded-xl transition-all ${item.active ? "bg-gray-50 text-[#0d3b59]" : "text-[#191919]"
+                        }`}
                     >
                       <span className="text-[15px] font-semibold">{item.label}</span>
                     </Link>
@@ -329,17 +324,17 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          
+
           <div className="p-4 border-t border-gray-100 bg-gray-50/50 space-y-3">
-            <Link 
-              href="/signup" 
+            <Link
+              href="/signup"
               onClick={() => setMobileOpen(false)}
               className="w-full block text-center py-2.5 text-[14px] font-bold text-[#0d3b59] border border-[#0d3b59]/30 rounded-xl bg-white"
             >
               Sign up
             </Link>
-            <Link 
-              href="/login" 
+            <Link
+              href="/login"
               onClick={() => setMobileOpen(false)}
               className="w-full block text-center py-2.5 text-[14px] font-bold text-white bg-[#0d3b59] rounded-xl shadow-md"
             >

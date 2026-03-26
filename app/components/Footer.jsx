@@ -5,14 +5,14 @@ import SocialLinks from './SocialLinks';
 const Footer = () => {
   return (
     <footer className="w-full bg-[#f8fafc] pt-12 pb-8 border-t border-slate-200">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:pl-6 lg:pr-14 xl:pl-4 xl:pr-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-10">
           {/* Logo & Tagline */}
           <div className="lg:col-span-8 space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex items-center h-12">
+              <div className="flex items-center h-12 -ml-2">
                 <img src="/logo.png" alt="Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
-                <div className="flex items-baseline ml-1">
+                <div className="flex items-baseline -ml-1">
                   <span className="text-[24px] font-normal tracking-tight text-[#0d3b59]">Degree</span>
                   <span className="text-[24px] font-bold tracking-tight text-[#0d3b59]">FYD</span>
                 </div>
@@ -52,9 +52,9 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-8">
             {['Support', 'Help Center'].map((link) => (
-              <Link 
-                key={link} 
-                href="#" 
+              <Link
+                key={link}
+                href="#"
                 className="text-[14px] font-medium text-slate-400 hover:text-[#0d3b59] transition-colors"
               >
                 {link}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SignupPage() {
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-[#f8fafc] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center items-center gap-1 group">
           <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />

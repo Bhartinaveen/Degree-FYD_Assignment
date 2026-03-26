@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* Header Section */}
       <section className="bg-white pt-5 pb-3">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:pl-6 lg:pr-14 xl:pl-4 xl:pr-16">
           <nav className="flex items-center gap-2 mb-6 text-[13px] font-medium tracking-tight">
             <Link href="/" className="text-[#191919] hover:text-[#f39c12] transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ export default function Home() {
         Includes the primary comparison cards, expert contact, and popular pairings
       */}
       <section className="flex-1 bg-[#e7ebee] border-t border-gray-100 py-3">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:pl-6 lg:pr-14 xl:pl-4 xl:pr-16">
           <div className="flex flex-col lg:flex-row gap-8 items-start">
 
             <div className="flex-1 w-full">
