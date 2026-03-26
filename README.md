@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DegreeFYD - Premium College Comparison Platform 🎓
 
-## Getting Started
+**DegreeFYD** is a modern, high-performance web application designed to help students evaluate and compare top Indian colleges with ease. Built with a focus on premium aesthetics and seamless user experience, it provides a comprehensive side-by-side analysis of key educational metrics.
 
-First, run the development server:
+![DegreeFYD Preview](/logo.png)
+
+## 🚀 Key Features
+
+- **Interactive Comparison Engine**: Select any two colleges to see a detailed, side-by-side breakdown of fees, placements, rankings, and more.
+- **Popular Comparisons Carousel**: A curated selection of high-interest college pairings, featuring a smooth, touch-responsive navigation system.
+- **Expert Connect**: A dedicated section for users to get personalized guidance from educational consultants.
+- **Premium UI/UX**:
+  - Clean, professional design with a custom color palette (`#0d3b59` primary, `#f39c12` accent).
+  - Modern typography and fluid animations.
+  - Fully responsive layout for desktop, tablet, and mobile.
+- **Fast Performance**: Optimized using Next.js 15+ and the App Router for lightning-fast page loads.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: React Hooks (useState, useRef)
+- **Icons/UI**: Custom SVG Icons & Lucide-inspired components
+- **Deployment Ready**: Fully compatible with Vercel and other modern hosting platforms
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/
+│   ├── components/      # UI components (Navbar, Footer, Modal, etc.)
+│   ├── data/            # Centralized college and comparison datasets
+│   ├── utils/           # Utility functions and business logic
+│   ├── globals.css      # Core design tokens and global styles
+│   └── page.jsx         # Main landing page entry point
+├── public/              # Static assets (Logos, Icons, Mascot)
+└── README.md            # You are here!
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run the project locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/degreefyd.git
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+4.  **Open the app**:
+    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## 🎨 Design Philosophy
 
-To learn more about Next.js, take a look at the following resources:
+DegreeFYD follows a **minimalist yet functional** design philosophy. We prioritize:
+- **Clarity**: Information hierarchy that guides the student's eyes to the most important metrics.
+- **Trust**: Professional color schemes and high-quality iconography to build institutional trust.
+- **Interactivity**: Micro-animations and hover effects that make the platform feel alive and responsive.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Developed for educational excellence by **DegreeFYD Team**.*
