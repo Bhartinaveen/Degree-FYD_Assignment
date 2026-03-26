@@ -4,30 +4,35 @@ export const popularColleges = [
     name: "Alagappa University's Directorate of Distance Education",
     location: "Karaikudi, Tamil Nadu",
     logo: "/alagappa.jpg",
+    link: "https://www.alagappauniversity.ac.in/homepage"
   },
   {
     id: "amity",
     name: "Amity School of Distance Education",
     location: "Noida, New Delhi",
     logo: "/amity.png",
+    link: "https://noida.amity.edu/admission-open/"
   },
   {
     id: "amity-2",
     name: "Amity School of Distance Education",
     location: "Noida, New Delhi",
     logo: "/amity.png",
+    link: "https://noida.amity.edu/admission-open/"
   },
   {
     id: "amity-3",
     name: "Amity School of Distance Education",
     location: "Noida, New Delhi",
     logo: "/amity.png",
+    link: "https://noida.amity.edu/admission-open/"
   },
   {
     id: "amity-4",
     name: "Amity School of Distance Education",
     location: "Noida, New Delhi",
     logo: "/amity.png",
+    link: "https://noida.amity.edu/admission-open/"
   },
 ];
 

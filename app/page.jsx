@@ -198,25 +198,43 @@ export default function Home() {
                 Explore Some Popular colleges-
               </h3>
               <div className="space-y-4">
-                {popularColleges.map((college) => (
-                  <div key={college.id} className="bg-white border border-gray-200 rounded-lg p-3.5 shadow-sm block group cursor-pointer hover:shadow-md transition-shadow">
-                    <div className="w-full aspect-[2/1] rounded-md overflow-hidden mb-3.5">
-                      <img src={college.logo} alt={college.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
-                    </div>
-                    <div className="px-0.5">
-                      <h4 className="text-[#0070c0] text-[16px] font-normal leading-tight mb-2 underline decoration-1 underline-offset-[3px] group-hover:text-blue-700">
-                        {college.name}
-                      </h4>
-                      <div className="flex items-center gap-1.5 text-[#555555] pb-0.5">
-                        <svg className="w-[15px] h-[15px] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <span className="text-[14px]">{college.location}</span>
+                {popularColleges.map((college) => {
+                  const CardContent = (
+                    <>
+                      <div className="w-full aspect-[2/1] rounded-md overflow-hidden mb-3.5">
+                        <img src={college.logo} alt={college.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" />
                       </div>
+                      <div className="px-0.5">
+                        <h4 className="text-[#0070c0] text-[16px] font-normal leading-tight mb-2 underline decoration-1 underline-offset-[3px] group-hover:text-blue-700">
+                          {college.name}
+                        </h4>
+                        <div className="flex items-center gap-1.5 text-[#555555] pb-0.5">
+                          <svg className="w-[15px] h-[15px] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          <span className="text-[14px]">{college.location}</span>
+                        </div>
+                      </div>
+                    </>
+                  );
+
+                  return college.link ? (
+                    <a 
+                      key={college.id} 
+                      href={college.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white border border-gray-200 rounded-lg p-3.5 shadow-sm block group cursor-pointer hover:shadow-md transition-shadow"
+                    >
+                      {CardContent}
+                    </a>
+                  ) : (
+                    <div key={college.id} className="bg-white border border-gray-200 rounded-lg p-3.5 shadow-sm block group cursor-pointer hover:shadow-md transition-shadow">
+                      {CardContent}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </aside>
 
